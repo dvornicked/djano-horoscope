@@ -3,5 +3,5 @@ from . import views
 
 urlpatterns = [
     path('<int:sign>', views.zodiac_int),
-    path('<str:sign>', views.zodiac),
+    path('<str:sign>', views.zodiac, name='horoscope'),
 ]
