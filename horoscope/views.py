@@ -59,9 +59,10 @@ zodiac_dict = {
 
 def index(request):
     zodiac_list = list(zodiac_dict)
-    lis = ''.join([f'<li><a href="{sign}">{sign}</a></li>' for sign in zodiac_list])
-    return HttpResponse(f'''<h1>Zodiac</h1>
-    <ul>{lis}</ul>''')
+    context = {
+        'zodiac_list': zodiac_list
+    }
+    return render(request, 'horoscope/index.html', context)
 
 
 def zodiac(request, sign: str):

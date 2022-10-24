@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zodiac</title>
+</head>
+<body>
+    <h1>Zodiac</h1>
+    <ul>
+        {% for zodiac in zodiac_list %}
+            <li><a href="{% url 'horoscope' zodiac %}">{{ zodiac|title }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
