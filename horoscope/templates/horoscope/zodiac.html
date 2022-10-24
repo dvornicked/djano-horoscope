@@ -3,6 +3,7 @@
 {% block title %}{{ sign }}{% endblock %}
 {% block content %}
     <h1>{{ sign }}</h1>
+    {% include 'includes/nav.html' %}
     {% if description is None %}
         Zodiac sign "{{ sign }}" not found
     {% else %}
