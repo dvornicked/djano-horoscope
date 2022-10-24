@@ -1,16 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ sign }}</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block title %}{{ sign }}{% endblock %}
+{% block content %}
     <h1>{{ sign }}</h1>
     {% if description is None %}
         Zodiac sign "{{ sign }}" not found
     {% else %}
         <p>{{ description }}</p>
     {% endif %}
-</body>
-</html>
+{% endblock %}
