@@ -1,0 +1,16 @@
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: blue;
+}
+
+a:hover {
+    color: deepskyblue;
+}
+

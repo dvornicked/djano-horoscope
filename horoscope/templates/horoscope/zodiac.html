@@ -1,5 +1,10 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'horoscope/css/zodiac.css' %}">
+{% endblock %}
 {% block title %}{{ sign }}{% endblock %}
 {% block content %}
     <h1>{{ sign }}</h1>
