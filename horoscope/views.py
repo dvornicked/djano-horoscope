@@ -65,10 +65,14 @@ def index(request):
     <ul>{lis}</ul>''')
 
 
-def zodiac(request, sign):
+def zodiac(request, sign: str):
     description = zodiac_dict.get(sign)
     if description:
-        return HttpResponse(description)
+        data = {
+            'sign': sign.title(),
+            'description': description
+        }
+        return render(request, 'horoscope/zodiac.html', data)
     else:
         return HttpResponse(f'Zodiac sign "{sign}" not found')
 
